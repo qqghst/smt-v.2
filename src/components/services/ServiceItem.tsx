@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import styles from './styles.module.scss';
+import type { StaticImageData } from 'next/image'
 
-import {TattoServices, TattoServices2, TattoServices3, TattoServices4} from '../../assets/index'
+import styles from './styles.module.scss';
 
 import gsap from 'gsap';
 
 interface IServiceItem {
     title: string;
     subtitle: string;
+    imageSrc: StaticImageData;
 }
 
-const ServiceItem: React.FC<IServiceItem> = ({ title, subtitle }) => {
+const ServiceItem: React.FC<IServiceItem> = ({ title, subtitle, imageSrc }) => {
     useEffect(() => {
         const items = document.querySelectorAll('#item');
 
@@ -28,8 +29,8 @@ const ServiceItem: React.FC<IServiceItem> = ({ title, subtitle }) => {
 
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
+                const x = (e as MouseEvent).clientX - rect.left - rect.width / 2;
+                const y = (e as MouseEvent).clientY - rect.top - rect.height / 2;
                 gsap.set(image, { x, y, transformOrigin: 'center center' });
             });
         });
@@ -44,7 +45,7 @@ const ServiceItem: React.FC<IServiceItem> = ({ title, subtitle }) => {
                     <Image
                         id='img'
                         className={styles.img}
-                        src={TattoServices}
+                        src={imageSrc}
                         alt='image'
                         width={600 / 2}
                         height={800 / 2}

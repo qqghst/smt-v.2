@@ -1,0 +1,22 @@
+.imageСontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 600px;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+.active {
+    opacity: 1;
+}

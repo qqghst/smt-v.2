@@ -9,7 +9,12 @@ module.exports = {
         './src/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'heroImg': "url('/assets/bg.jpg')",
+                'footer-texture': "url('/img/footer-texture.png')",
+              }
+        },
     },
     plugins: [],
 };
