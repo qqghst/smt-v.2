@@ -7,7 +7,7 @@ import Button from '@/ui/buttonCircle';
 
 const Works: React.FC = () => {
     return (
-        <section className='bg-black'>
+        <section className='bg-[#0F0F0F]'>
             <div className='container mx-auto py-[200px]'>
                 <div>
                     <div className='flex flex-row justify-between items-center'>

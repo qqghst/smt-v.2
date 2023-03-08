@@ -44,8 +44,8 @@ const About: React.FC = () => {
     }, []);
 
     return (
-        <section className='bg-black'>
-            <div className='container mx-auto py-[240px] '>
+        <section className='bg-[#0F0F0F]'>
+            <div className='container mx-auto py-[200px] '>
                 <Title>о студии</Title>
                 <div className={`${styles.scrollingText} my-[56px]`}>
                     <p>

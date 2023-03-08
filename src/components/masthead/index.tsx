@@ -34,6 +34,7 @@ import Image from 'next/image';
 import styles from './style.module.scss';
 
 import BgImage from 'public/bg.webp';
+import MastheadSquare from 'public/masthead-square.webp';
 
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { Cormorant_Garamond } from 'next/font/google';
@@ -47,38 +48,38 @@ export const cormorantGaramond = Cormorant_Garamond({
 const Masthead: React.FC = () => {
     return (
         <>
-            <div className='relative'>
-                <Image
-                    src={BgImage}
-                    alt='bgImage'
-                    layout='fill'
-                    className='object-center object-cover pointer-events-none'
-                />
-                <Navbar />
-                <section className='relative z-1 bg-center min-h-screen flex flex-col justify-center items-center'>
-                    <div className='text-center flex-1 flex items-center justify-center flex-col'>
-                        <div className='pt-[16px] relative'>
-                            <h1 className=' text-[27.65px] md:text-[33.18px]'>
-                                <div>
-                                    <div className={`${cormorantGaramond.className} ${styles.title}`}>SORRY</div>
-                                </div>
-                                <div>
-                                    <div className={`${cormorantGaramond.className} ${styles.title}`}>MOM TATTOO</div>
-                                </div>
-                            </h1>
-                        </div>
+            <Navbar />
+            <section className='bg-[#0F0F0F] min-h-screen flex flex-col justify-center items-center relative'>
+                <div className='px-[40px] mx-auto text-center flex-1 flex items-center justify-center flex-col'>
+                    <div className='px-[40px] absolute right-0 left-0 top-[40%]'>
+                        <h1 className='text-white text-[27.65px] md:text-[9.2vw]'>
+                            SORRY MOM TATTOO
+                        </h1>
                     </div>
-                    <div className='container mx-auto flex flex-row justify-between pb-[32px] text-white'>
-                        <p className='text-[13.33px] font-light'>ЛИСТАЙ ВНИЗ</p>
-                        <p className='text-[13.33px] font-light'>ТАТУ СТУДИЯ, ЭЛИСТА</p>
-                        <AiOutlineArrowDown size={'24px'} className='animate-bounce'/>
+                </div>
+                <div className='container mx-auto flex flex-row justify-between pb-[40px] text-white'>
+                    <div className='flex flex-col justify-end'>
+                        <h3 className='text-[40px] w-[450px] text-white pb-[40px]'>
+                            Lorem ipsum dolor sit amet consectetur
+                        </h3>
+                        <p className='text-[13.3px] text-white w-[400px] leading-[150%]'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ipsum aspernatur id, fugiat, assumenda aut
+                            corporis nemo itaque doloribus, est deserunt
+                            eligendi sapiente.kjdaskldjaksldjjfklsfjlsjhdfwejhfweljf aklsdjlasdh
+                        </p>
                     </div>
-                </section>
-            </div>
+                    <div>
+                        <Image
+                            className='w-[650px] h-[250px]'
+                            src={MastheadSquare}
+                            alt='bg-image'
+                        />
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
 
 export default Masthead;
-
-

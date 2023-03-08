@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
     return (
         <section className='relative z-10'>
-            <div className='container mx-auto flex flex-row justify-between items-center py-[40px] absolute top-0 left-0 right-0 '>
+            <div className='px-[40px] mx-auto flex flex-row justify-between items-center py-[40px] absolute top-0 left-0 right-0 '>
                 <div>
                     <a
                         className='text-3xl text-white'
@@ -33,13 +33,21 @@ const Navbar: React.FC = () => {
                         </a>
                         <ul className='flex flex-col gap-[32px] xl:gap-[8px]'>
                             <li className={styles.hoverLink}>
-                                <Link href='#'>О СТУДИИ</Link>
+                                <Link href='#'>Вконтакте</Link>
+                            </li>
+                            <li className={styles.hoverLink}>
+                                <Link href='#'>Инстаграм</Link>
+                            </li>
+                        </ul>
+                        <ul className='flex flex-col gap-[32px] xl:gap-[8px]'>
+                            <li className={styles.hoverLink}>
+                                <Link href='/about-page'>О студии</Link>
                             </li>
                             <li className={styles.hoverLinkSmaller}>
-                                <Link href='#'>РАБОТЫ</Link>
+                                <Link href='/all-projects'>Работы</Link>
                             </li>
                             <li className={styles.hoverLinkSmaller}>
-                                <Link href='#'>УСЛУГИ</Link>
+                                <Link href='#serviceId'>Услуги</Link>
                             </li>
                         </ul>
                     </div>

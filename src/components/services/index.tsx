@@ -8,8 +8,8 @@ import {TattoServices, TattoServices2, TattoServices3, TattoServices4} from '../
 
 const Services: React.FC = ({}) => {
     return (
-        <section className='bg-black'>
-            <div className='container mx-auto py-[100px]'>
+        <section id='serviceId' className='bg-[#0F0F0F]'>
+            <div className='container mx-auto'>
                 <Title>услуги</Title>
                 <div>
                     <ServiceItem title={'ТАТУИРОВКА'} subtitle={'НАДПИСЬ'} imageSrc={TattoServices}/>
